@@ -1,0 +1,165 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50; /* Green header */
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Main Content Area */
+main {
+    width: 90%;
+    max-width: 800px; /* Max width for content */
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Search Container */
+.search-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Space between input and button */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.search-container input[type="text"] {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    flex-grow: 1; /* Input takes available space */
+    min-width: 200px; /* Minimum width for the input */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.search-container button {
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #45a049;
+}
+
+/* Weather Display Container */
+.weather-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.current-weather h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #00796b; /* Teal color for city name */
+}
+
+.current-weather p {
+    font-size: 1.1rem;
+    margin: 0.25rem 0;
+}
+
+.current-weather span {
+    font-weight: bold;
+}
+
+#weather-icon {
+    width: 80px; /* Size of the weather icon */
+    height: 80px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Error and Loading Message Styles */
+.error-message, .loading-animation {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.error-message {
+    background-color: #ffdddd; /* Light red for errors */
+    color: #d32f2f; /* Dark red */
+    border: 1px solid #d32f2f;
+}
+
+.loading-animation {
+    background-color: #e0e0e0; /* Light grey for loading */
+    color: #555;
+    border: 1px solid #aaa;
+}
+
+/* Utility Class for Hiding Elements */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .search-container input[type="text"],
+    .search-container button {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .weather-container {
+        padding: 1.5rem;
+    }
+
+    .current-weather h2 {
+        font-size: 1.75rem;
+    }
+}
